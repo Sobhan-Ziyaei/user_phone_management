@@ -15,8 +15,11 @@ class $AssetsLottieGen {
   /// File path: assets/lottie/animation_lmyntckq.json
   String get animationLmyntckq => 'assets/lottie/animation_lmyntckq.json';
 
+  /// File path: assets/lottie/animation_lmyqpb7n.json
+  String get animationLmyqpb7n => 'assets/lottie/animation_lmyqpb7n.json';
+
   /// List of all assets
-  List<String> get values => [animationLmyntckq];
+  List<String> get values => [animationLmyntckq, animationLmyqpb7n];
 }
 
 class Assets {
