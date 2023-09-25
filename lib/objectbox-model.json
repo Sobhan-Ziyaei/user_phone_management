@@ -1,0 +1,108 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:8720876133369222699",
+      "lastPropertyId": "2:1424578953705027941",
+      "name": "User",
+      "properties": [
+        {
+          "id": "1:2775276170553381159",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1424578953705027941",
+          "name": "name",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:751949523459344768",
+          "name": "phones",
+          "targetId": "2:2099879679874356396"
+        },
+        {
+          "id": "3:9025680439914693600",
+          "name": "sims",
+          "targetId": "3:8557249298016761533"
+        }
+      ]
+    },
+    {
+      "id": "2:2099879679874356396",
+      "lastPropertyId": "2:4009019478835516442",
+      "name": "UserPhone",
+      "properties": [
+        {
+          "id": "1:6281712971837724278",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4009019478835516442",
+          "name": "ownerId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:3720726435416201982",
+          "relationTarget": "User"
+        }
+      ],
+      "relations": [
+        {
+          "id": "4:4527140499173109839",
+          "name": "sims",
+          "targetId": "3:8557249298016761533"
+        }
+      ]
+    },
+    {
+      "id": "3:8557249298016761533",
+      "lastPropertyId": "3:6844645908173467628",
+      "name": "UserSim",
+      "properties": [
+        {
+          "id": "1:9186424502715358578",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4415956633486412004",
+          "name": "phoneOwnerId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:7368859512936647764",
+          "relationTarget": "UserPhone"
+        },
+        {
+          "id": "3:6844645908173467628",
+          "name": "userOwnerId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "3:829660583491856506",
+          "relationTarget": "User"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "3:8557249298016761533",
+  "lastIndexId": "3:829660583491856506",
+  "lastRelationId": "4:4527140499173109839",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [
+    2533665393080313201
+  ],
+  "version": 1
+}
